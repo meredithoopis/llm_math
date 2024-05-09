@@ -1,0 +1,32 @@
+{
+  "add_bos_token": true,
+  "add_eos_token": false,
+  "added_tokens_decoder": {
+    "100000": {
+      "content": "<｜begin▁of▁sentence｜>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "100001": {
+      "content": "<｜end▁of▁sentence｜>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    }
+  },
+  "bos_token": "<｜begin▁of▁sentence｜>",
+  "chat_template": "{% if not add_generation_prompt is defined %}{% set add_generation_prompt = false %}{% endif %}{{ bos_token }}{% for message in messages %}{% if message['role'] == 'user' %}{{ 'User: ' + message['content'] + '\n\n' }}{% elif message['role'] == 'assistant' %}{{ 'Assistant: ' + message['content'] + eos_token }}{% elif message['role'] == 'system' %}{{ message['content'] + '\n\n' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ 'Assistant:' }}{% endif %}",
+  "clean_up_tokenization_spaces": false,
+  "eos_token": "<｜end▁of▁sentence｜>",
+  "model_max_length": 4096,
+  "pad_token": "<｜end▁of▁sentence｜>",
+  "sp_model_kwargs": {},
+  "tokenizer_class": "LlamaTokenizer",
+  "unk_token": null,
+  "use_default_system_prompt": false
+}
