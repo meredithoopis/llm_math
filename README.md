@@ -1,9 +1,7 @@
 # Finetuning LLM for Elementary Math
 
 ## Overview
-This project aims to fine-tune a large language model (LLM) to perform elementary mathematics tasks. The goal is to enhance the model's capability to solve basic arithmetic problems, understand elementary math concepts, and provide explanations for its solutions. The targeted audience includes educators, students, and developers interested in educational AI applications.
-
-data: [ZaloAI](https://challenge.zalo.ai/portal/elementary-maths-solving)
+This project aims to fine-tune a large language model (LLM) to perform elementary mathematics tasks. The goal is to enhance the model's capability to solve basic arithmetic problems, understand elementary math concepts, and provide explanations for its solutions.
 
 
 ## Installation
@@ -26,7 +24,7 @@ pip install -r requirements.txt
 The model was evaluated using the dataset of ZaloAI 2023 challenge: [ZaloAI](https://challenge.zalo.ai/portal/elementary-maths-solving)
 
 ## Usage 
-To train the model, run and adjust the hyperparameters as need: 
+To train the model, run and adjust the hyperparameters as needed: 
 ```
 python main.py 
 ```
